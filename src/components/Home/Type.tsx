@@ -1,4 +1,4 @@
-import React from "react";
+
 import Typewriter from "typewriter-effect";
 
 function Type() {
@@ -7,7 +7,7 @@ function Type() {
       options={{
         strings: [
           "Software Developer",
-          "MERN Stack Developer",
+          "MERN Stack and React Native Developer",
           "Open Source Contributor",
         ],
         autoStart: true,

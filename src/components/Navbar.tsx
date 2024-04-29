@@ -16,7 +16,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
-  const [expand, updateExpanded] = useState<boolean | "expanded">(false);
+  const [expand, updateExpanded] = useState<boolean>(false);
   const [navColour, updateNavbar] = useState(false);
 
   function scrollHandler() {
@@ -37,10 +37,13 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
+        <Navbar.Brand href="/" className="d-flex">
+         
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
-            updateExpanded((it) => (it ? false : "expanded"));
+            updateExpanded((it) => (it ? false : true));
           }}
         >
           <span></span>
@@ -87,6 +90,8 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
+
+          
 
             <Nav.Item className="fork-btn">
               <Button

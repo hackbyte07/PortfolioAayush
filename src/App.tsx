@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ResumeNew from "./components/Resume/ResumeNew";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -24,7 +25,7 @@ function App() {
     }, 1200);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, []);   
 
   return (
     <Router>
@@ -35,6 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
+          <Route path="/resume" element={<ResumeNew/>}/>
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />        
